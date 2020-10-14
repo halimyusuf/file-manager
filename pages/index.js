@@ -19,7 +19,7 @@ export default function Home() {
                 <Nav />
               </div>
               <div className={`${styles.mainCont} px-4 py-5`}>
-                <div className={`${styles.searchBar} `}>
+                <div className={`${styles.searchBar}`}>
                   <SearchBar />
                 </div>
                 <div className='py-8'>

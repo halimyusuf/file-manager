@@ -7,7 +7,7 @@ height: 100vh;
 
 .allCont {
   display: grid;
-  grid-template-columns: 1fr 5fr 3fr;
+  grid-template-columns: 1fr 5fr 2fr;
   height: 100%;
 }
 
@@ -24,6 +24,7 @@ height: 100vh;
 
 .mainCont {
   background-color: rgb(189, 189, 189, 0.2);
+  overflow: scroll;
 }
 
 .down {
@@ -46,4 +47,7 @@ height: 100vh;
 
 .searchBar {
   box-shadow: grey;
+  position: fixed;
+  width: 300px;
+  overflow: hidden;
 }
