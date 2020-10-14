@@ -15,19 +15,19 @@ const Nav = () => {
 
       <div>
         <div className='py-2'>
-          <RiAppsLine size='22' />
+          <RiAppsLine color='grey' size='22' />
         </div>
         <div className='py-2'>
-          <CgFile size='22' />
+          <CgFile color='grey' size='22' />
         </div>
         <div className='py-2'>
-          <FiSettings size='22' />
+          <FiSettings color='grey' size='22' />
         </div>
         <div className='py-2'>
-          <BsCloudUpload size='22' />
+          <BsCloudUpload color='grey' size='22' />
         </div>
         <div className='py-2'>
-          <RiDeleteBin6Line size='22' />
+          <RiDeleteBin6Line color='grey' size='22' />
         </div>
       </div>
     </>
