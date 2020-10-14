@@ -1,0 +1,10 @@
+.searchInput {
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+}
+
+.searchIcon {
+    position: absolute;
+    padding: 4px;
+}
