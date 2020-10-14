@@ -8,7 +8,7 @@ import { CgFileDocument } from 'react-icons/cg';
 const QuickAccess = () => {
   const generateRandomColor = () => {};
   return (
-    <div>
+    <div className='pt-6'>
       <div className='text-lg pb-4'>Quick Access</div>
       <div className='flex flex-wrap justify-space-between'>
         <div className='px-3 py-2'>
