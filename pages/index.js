@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css';
 import Nav from '../components/nav';
 import SearchBar from '../components/SearchBar';
 import QuickAccess from '../components/QuickAccess';
+import Preview from '../components/Preview';
 
 export default function Home() {
   return (
@@ -22,8 +23,11 @@ export default function Home() {
                 <div className={`${styles.searchBar}`}>
                   <SearchBar />
                 </div>
-                <div className='py-8'>
+                <div className='py-4'>
                   <QuickAccess />
+                </div>
+                <div className='pt-6'>
+                  <Preview />
                 </div>
               </div>
               <div className={styles.down}></div>
