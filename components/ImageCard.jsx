@@ -12,9 +12,11 @@ const styles = {
     width: '100%',
     height: '100%',
     opacity: '0.9',
+    'border-radius': '15px',
   },
   b: {
     'font-weight': 'light',
+    'font-size': '80%',
     color: 'lightgrey',
     position: 'absolute',
     top: '80%',
