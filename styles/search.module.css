@@ -6,5 +6,11 @@
 
 .searchIcon {
     position: absolute;
-    padding: 4px;
+    top: 30%;
+    left: 66px;
+}
+
+.barCont {
+    display: flex;
+    align-items: center;
 }
