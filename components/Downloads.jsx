@@ -1,12 +1,20 @@
 import React from 'react';
 import styles from '../styles/Download.module.css';
 import { CgFileDocument } from 'react-icons/cg';
-import { BsDownload } from 'react-icons/bs';
+import { BsDownload, BsX } from 'react-icons/bs';
+// import {} from
 
-const Download = () => {
+const Download = ({ download, setDownload }) => {
   return (
     <div>
       <div className={styles.labelCont}>
+        {download ? (
+          <div onClick={() => setDownload(false)}>
+            <BsX size='30' />
+          </div>
+        ) : (
+          ''
+        )}
         <div className='text-lg text-grey'>Downloads</div>
         <div className={styles.dots}>...</div>
       </div>

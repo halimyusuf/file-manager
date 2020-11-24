@@ -11,7 +11,7 @@ import Download from '../components/Downloads';
 export default function Home() {
   const [screenSize, setScreenSize] = useState({});
   const [nav, setNav] = useState(false);
-  const [download, setDownload] = useState(false);
+  const [download, setDownload] = useState(true);
   useEffect(() => {
     const { innerWidth, innerHeight } = window;
     setScreenSize({ innerWidth, innerHeight });
@@ -27,11 +27,11 @@ export default function Home() {
         <title>File Manager</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div className={`${styles.container} pt-6`}>
+      <div className={`${styles.container}`}>
         <div className={styles.boxCont}>
-          <div className={`${styles.box} px-5 py-5`}>
+          <div className={`${styles.box}`}>
             <div className={styles.allCont}>
-              {screenSize.innerWidth > 800 ? (
+              {screenSize.innerWidth > 800 && !download ? (
                 <div className={styles.nav}>
                   <Nav />
                 </div>
@@ -39,25 +39,33 @@ export default function Home() {
                 ''
               )}
 
-              <div className={`${styles.mainCont} px-4 py-5`}>
-                {/* <div className={`${styles.searchContainer}`}> */}
-                <div className={`${styles.searchBar}`}>
-                  <SearchBar />
+              {!download ? (
+                <div className={`${styles.mainCont} px-4 py-5`}>
+                  {/* <div className={`${styles.searchContainer}`}> */}
+                  <div className={`${styles.searchBar}`}>
+                    <SearchBar setDownload={setDownload} />
+                  </div>
+                  {/* </div> */}
+                  <div className='py-4'>
+                    <QuickAccess />
+                  </div>
+                  <div className='pt-6'>
+                    <Preview />
+                  </div>
+                  <div className='pt-8'>
+                    <Review />
+                  </div>
                 </div>
-                {/* </div> */}
-                <div className='py-4'>
-                  <QuickAccess />
-                </div>
-                <div className='pt-6'>
-                  <Preview />
-                </div>
-                <div className='pt-8'>
-                  <Review />
-                </div>
-              </div>
-              {screenSize.innerWidth > 1000 ? (
-                <div className={styles.down}>
-                  <Download />
+              ) : (
+                ''
+              )}
+              {screenSize.innerWidth > 1000 || download ? (
+                <div
+                  className={`${styles.down} ${
+                    download ? styles.downloadPage : ''
+                  }`}
+                >
+                  <Download download setDownload={setDownload} />
                 </div>
               ) : (
                 ''

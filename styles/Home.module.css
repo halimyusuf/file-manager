@@ -37,6 +37,13 @@ height: 100vh;
   max-width: 400px;
 }
 
+.downloadPage {
+  min-width: 100vw !important;
+  margin: 0;
+  height: 100vh;
+  z-index: 10;
+}
+
 .boxCont {
   /* width: 100vw; */
   display: flex;
