@@ -1,0 +1,69 @@
+.downloadLabel {
+    font-size: 0.9rem;
+    color: grey;
+    padding-bottom: 7px;
+}
+
+.contSize {
+    font-size: 0.9rem;
+    color: grey;
+}
+
+.midDesc {
+
+}
+
+.cont , .contOne{
+    background:  rgb(189, 189, 189, 0.15);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: space-around;
+}
+
+
+
+.iconContainer {
+    background-color: #1976D2;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.labelCont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.dots  {
+    color: grey;
+    font-size: 1.7rem;
+
+}
+
+.loaderCont {
+    width: 100%;
+    height: 4px;
+    background: white;
+    border-radius: 10px;
+}
+
+.loader {
+    background-color:#1976D2;
+    width: 40%;
+    height: inherit;
+    border-radius: inherit;
+    z-index: 2;
+
+}
+
+.midDescOne {
+    width: 65%;
+}
