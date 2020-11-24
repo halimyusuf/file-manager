@@ -1,0 +1,26 @@
+table,
+th,
+td {
+    /* border: 1px solid black; */
+}
+
+th {
+    font-weight: 300;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.9rem;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+img:hover {
+    opacity: 0.5
+}
+
+
+table {
+    width: 100%
+}
