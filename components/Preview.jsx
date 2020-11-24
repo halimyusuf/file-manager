@@ -20,7 +20,7 @@ const Preview = () => {
   return (
     <div>
       <div style={styles.a} className='pr-3'>
-        <div> Preview</div>
+        <div className='text-lg bold'> Preview</div>
         <div className='text-primary pointer'>
           <small>View in folders</small>
         </div>
