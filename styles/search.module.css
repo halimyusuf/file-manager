@@ -1,7 +1,8 @@
 .searchInput {
-    width: 100%;
+    width: 80%;
     border-radius: 5px;
     outline: none;
+    border: 2px solid lightblue;
 }
 
 .searchIcon {
@@ -13,4 +14,9 @@
 .barCont {
     display: flex;
     align-items: center;
+    /* justify-content: center; */
+    background-color: white;
+    /* padding: 10px 5px; */
+    border-radius: 5px;
 }
+
