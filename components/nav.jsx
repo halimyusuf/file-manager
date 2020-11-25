@@ -3,12 +3,19 @@ import styles from '../styles/Home.module.css';
 import { RiAppsLine } from 'react-icons/ri';
 import { CgFile } from 'react-icons/cg';
 import { FiSettings } from 'react-icons/fi';
-import { BsCloudUpload } from 'react-icons/bs';
+import { BsCloudUpload, BsX } from 'react-icons/bs';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 
-const Nav = () => {
+const Nav = ({ nav, setNav }) => {
   return (
     <>
+      {nav ? (
+        <div className='pb-3' onClick={() => setNav(false)}>
+          <BsX size='30' color='black' />
+        </div>
+      ) : (
+        ''
+      )}
       <div className='pb-4'>
         <div className='text-lg'>Files</div>
       </div>
