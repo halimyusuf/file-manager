@@ -29,6 +29,11 @@ export default function Home() {
       <Head>
         <title>File Manager</title>
         <link rel='icon' href='/favicon.ico' />
+        <link
+          href='https://pagecdn.io/lib/tailwindcss/1.6.2/tailwind.min.css'
+          rel='stylesheet'
+          crossorigin='anonymous'
+        />
       </Head>
       <div className={`${styles.container}`}>
         <div className={styles.boxCont}>
