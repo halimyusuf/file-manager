@@ -11,7 +11,7 @@ import Download from '../components/Downloads';
 export default function Home() {
   const [screenSize, setScreenSize] = useState({});
   const [nav, setNav] = useState(false);
-  const [download, setDownload] = useState(true);
+  const [download, setDownload] = useState(false);
   useEffect(() => {
     const { innerWidth, innerHeight } = window;
     setScreenSize({ innerWidth, innerHeight });
@@ -20,6 +20,9 @@ export default function Home() {
       setScreenSize({ innerHeight, innerWidth });
     };
   }, []);
+
+  const downloadRange = screenSize.innerWidth > 700;
+  const navRange = screenSize.innerWidth > 600;
 
   return (
     <>
@@ -31,9 +34,9 @@ export default function Home() {
         <div className={styles.boxCont}>
           <div className={`${styles.box}`}>
             <div className={styles.allCont}>
-              {screenSize.innerWidth > 800 && !download ? (
-                <div className={styles.nav}>
-                  <Nav />
+              {(navRange && !download) || nav ? (
+                <div className={`${styles.nav} ${nav ? styles.smNav : ''}`}>
+                  <Nav nav={nav} setNav={setNav} />
                 </div>
               ) : (
                 ''
@@ -43,7 +46,12 @@ export default function Home() {
                 <div className={`${styles.mainCont} px-4 py-5`}>
                   {/* <div className={`${styles.searchContainer}`}> */}
                   <div className={`${styles.searchBar}`}>
-                    <SearchBar setDownload={setDownload} />
+                    <SearchBar
+                      downloadRange={downloadRange}
+                      navRange={navRange}
+                      setDownload={setDownload}
+                      setNav={setNav}
+                    />
                   </div>
                   {/* </div> */}
                   <div className='py-4'>
@@ -59,13 +67,13 @@ export default function Home() {
               ) : (
                 ''
               )}
-              {screenSize.innerWidth > 1000 || download ? (
+              {downloadRange || download ? (
                 <div
                   className={`${styles.down} ${
                     download ? styles.downloadPage : ''
                   }`}
                 >
-                  <Download download setDownload={setDownload} />
+                  <Download download={download} setDownload={setDownload} />
                 </div>
               ) : (
                 ''
