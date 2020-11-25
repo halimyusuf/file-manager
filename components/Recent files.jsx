@@ -1,6 +1,5 @@
 import React from 'react';
-import ImageCard from './ImageCard';
-import Styles from '../styles/Recent.module.css';
+// import ImageCard from './ImageCard';
 
 const styles = {
   a: {
